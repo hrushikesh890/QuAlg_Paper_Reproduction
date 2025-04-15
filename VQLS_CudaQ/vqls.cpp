@@ -22,7 +22,6 @@ struct hardware_efficient_ansatz{
                 {
                     x::<cudaq::ctrl>(ans(j+1), ans(j));
                 }
-
             }
         }
 
