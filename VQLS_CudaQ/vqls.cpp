@@ -86,7 +86,7 @@ int main() {
     std::vector<double> theta(nQubits * nLayers, 0.0);
 
     auto cost_fn = [](std::vector<double> th) { return vqls_cost(th); };
-    auto grad_fn = cudaq::gradient(cost_fn);
+    auto grad_fn = cudaq::make_gradient(cost_fn);
 
     for (int iter = 0; iter < 50; ++iter) {
         auto grad = grad_fn(theta);
